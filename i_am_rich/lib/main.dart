@@ -9,10 +9,11 @@ void main() {
           title:const Text("I am Rich"),
           centerTitle: true,
           backgroundColor:const Color(0xFFC7BB10),
+
         ),
-        body: const Center(
+        body:const Center(
           child: Image(
-            image: NetworkImage('https://i.postimg.cc/qBCWnjNP/68747470733a2f2f692e706f7374696d672e63632f64317256374662422f6c6f676f2e706e67.png'),
+            image: AssetImage('images/SG.png'),
           ),
         ),
         ),
