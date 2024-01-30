@@ -13,7 +13,7 @@ void main() {
         ),
         body:const Center(
           child: Image(
-            image: AssetImage('images/SG.png'),
+            image: AssetImage('images/img.png'),
           ),
         ),
         ),
