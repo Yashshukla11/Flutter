@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
 
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
+                children: [˜
                   Image.network('https://i.postimg.cc/gk3LNKJj/pexels-eberhard-grossgasteiger-707344.jpg', width: 80, height: 80),
                   Image.network('https://i.postimg.cc/bwpMJ8FT/pexels-artem-saranin-1547813.jpg', width: 80, height: 80),
                   Image.network('https://i.postimg.cc/hGdc8Kcd/pexels-michael-block-3225517-1.jpg', width: 80, height: 80),
