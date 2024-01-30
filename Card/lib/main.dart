@@ -27,28 +27,23 @@ class MyApp extends StatelessWidget {
                   maxRadius: 70,
                   minRadius: 30,
                 ),
-                Title(
-                  color: Colors.red,
-                  child: const Column(
-                    children: [
-                      Text(
-                        'Yash Shukla',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Ananda',
-                          fontSize: 50.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Text(
-                        "FLUTTER DEVELOPER",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'Wible Town Standard Demo',
-                          fontSize: 20,
-                        ),
-                      ),
-                    ],
+
+                const Text(
+                  'Yash Shukla',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Ananda',
+                    fontSize: 50.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Text(
+                  "FLUTTER DEVELOPER",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Wible Town Standard Demo',
+                    fontSize: 20,
+
                   ),
                 ),
                 Container(
