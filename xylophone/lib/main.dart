@@ -18,105 +18,13 @@ class XylophoneApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      plays(1);
-                    },
-                    child: Container(),
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(0),
-                        ),
-                        backgroundColor: Colors.deepPurple
-                    ),
-                  )
-              ),
-              Expanded(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      plays(2);
-                    },
-                    child: Container(),
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(0),
-                        ),
-                        backgroundColor: Colors.greenAccent
-                    ),
-                  )
-              ),
-              Expanded(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      plays(3);
-                    },
-                    child: Container(),
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(0),
-                        ),
-                        backgroundColor: Colors.teal
-                    ),
-                  )
-              ),
-              Expanded(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      plays(4);
-                    },
-                    child: Container(),
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(0),
-                        ),
-                        backgroundColor: Colors.indigoAccent
-                    ),
-                  )
-              ),
-              Expanded(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      plays(5);
-                    },
-                    child: Container(),
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(0),
-                        ),
-                        backgroundColor: Colors.orange
-                    ),
-                  )
-              ),
-              Expanded(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      plays(6);
-                    },
-                    child: Container(),
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(0),
-                        ),
-                        backgroundColor: Colors.red
-                    ),
-                  )
-              ),
-              Expanded(
-                  child: ElevatedButton(
-                    onPressed: () {
-                      plays(7);
-                    },
-                    child: Container(),
-                    style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(0),
-                        ),
-                        backgroundColor: Colors.amber
-                    ),
-                  )
-              ),
-
+              buildKey(0xFF32D1ED,1),
+              buildKey(0xFF1AED8B,2),
+              buildKey(0xFFEDDE07,3),
+              buildKey(0xFFED9107,4),
+              buildKey(0xFFED1607,5),
+              buildKey(0xFF9530F2,6),
+              buildKey(0xFF960E90,7),
             ],
           ),
         ),
@@ -127,7 +35,27 @@ class XylophoneApp extends StatelessWidget {
     final player = AudioPlayer();
     String audioPath='../assets/assets_note$num.wav';
     await player.play(AssetSource(audioPath));
+
   }
+
+   Expanded buildKey(int colour, int kay) {
+     return Expanded(
+       child: ElevatedButton(
+         onPressed: () {
+           plays(kay);
+         },
+         style: ElevatedButton.styleFrom(
+           shape: RoundedRectangleBorder(
+             borderRadius: BorderRadius.circular(0),
+           ),
+           backgroundColor: Color(colour),
+         ),
+         child: Container(),
+       ),
+     );
+   }
+
+
 }
 
 
